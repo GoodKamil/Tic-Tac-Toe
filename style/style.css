@@ -1,0 +1,155 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.contener {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vh;
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contener__item {
+  position: relative;
+  flex-basis: calc(100% / 3);
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.top {
+  border-top: none;
+}
+.bottom {
+  border-bottom: none;
+}
+.left {
+  border-left: none;
+}
+
+.right {
+  border-right: none;
+}
+i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10rem;
+}
+
+.reset {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  z-index: 100;
+}
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap__text {
+  font-size: 6rem;
+  color: white;
+  letter-spacing: 1px;
+  animation: text 0.5s linear;
+}
+.wrap__btn {
+  border-style: none;
+  font-size: 4rem;
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.wrap__btn:hover {
+  color: white;
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.active {
+  cursor: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes text {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+  i {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+  .win {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  i {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  .win {
+    font-size: 2rem;
+    margin-top: 5rem;
+  }
+
+  .contener {
+    width: 45vh;
+    height: 45vh;
+  }
+  i {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 280px) and (orientation: portrait) {
+  .win {
+    font-size: 1.5rem;
+    margin-top: 10rem;
+  }
+
+  .contener {
+    width: 40vh;
+    height: 40vh;
+  }
+  i {
+    font-size: 3rem;
+  }
+}
