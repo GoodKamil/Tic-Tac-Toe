@@ -83,6 +83,10 @@ i {
   padding: 1rem 3rem;
   margin-top: 2rem;
   cursor: pointer;
+  animation: text 0.5s linear;
+  -webkit-animation-name: text;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
 }
 
 .wrap__btn:hover {
