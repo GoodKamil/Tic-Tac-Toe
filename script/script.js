@@ -34,20 +34,21 @@ function endGame(str) {
 }
 
 function check() {
+const allClassGrey = [...contenerItem].every(item =>
+    item.classList.contains('active')
+  );
+  
+  //Check Draw
+  if (allClassGrey) endGame('Draw!!!!');
+
+  //Check Win
   combinations.forEach(combination => {
-    // Check Draw
-    const allClassGrey = [...contenerItem].every(item =>
-      item.classList.contains('active')
-    );
-    if (allClassGrey) endGame('Draw!!');
-
-    //Check Win
-
-    if (combination.every(value => player1TabWin.indexOf(value) > -1))
+    if (combination.every(value => player1TabWin.indexOf(value) > -1)) {
       endGame("X's Win!!!");
-
-    if (combination.every(value => player2TabWin.indexOf(value) > -1))
+    }
+    if (combination.every(value => player2TabWin.indexOf(value) > -1)) {
       endGame("O's Win!!!");
+    }
   });
 }
 
