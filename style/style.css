@@ -73,7 +73,9 @@ i {
   color: white;
   letter-spacing: 1px;
   animation: text 0.5s linear;
-  -webkit-animation: text 0.5s linear;
+  -webkit-animation-name: text;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
 }
 .wrap__btn {
   border-style: none;
